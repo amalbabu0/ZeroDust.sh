@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Up
+Name=ZeroDust
 Comment=Run system maintenance script
 Exec=gnome-terminal -- bash -c /ZeroDust.sh
 Icon=/image.png
