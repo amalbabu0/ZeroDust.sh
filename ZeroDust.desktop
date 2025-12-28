@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Up
+Comment=Run system maintenance script
+Exec=gnome-terminal -- bash -c /ZeroDust.sh
+Icon=https://www.pngegg.com/en/png-bnzxj
+Terminal=false
+Categories=Utility;
