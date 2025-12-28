@@ -1,59 +1,140 @@
 # ZeroDust.sh
-sysrefresh.sh is a lightweight Bash script designed to automate routine system maintenance tasks on Debian-based Linux distributions. It performs a full system update, upgrade, and cleanup sequence — including removing unused packages, clearing caches, deleting temporary files, and rotating logs — all with clear, color-coded terminal output.
 
-Ubuntu System Maintenance Script README
-This Bash script automates routine Ubuntu/Debian system maintenance tasks including package updates, upgrades, cleanup, and temporary file removal with colored output for better visibility.
-​
+*A lightweight system maintenance script for Debian-based Linux systems*
 
-Features
-Updates package lists with apt update.
+**ZeroDust.sh** (formerly `sysrefresh.sh`) is a lightweight Bash script designed to automate routine system maintenance tasks on Debian-based Linux distributions. It performs a full system update, upgrade, and cleanup sequence — including removing unused packages, clearing caches, deleting temporary files, and rotating logs — all with clear, color-coded terminal output.
 
-Upgrades all installed packages using apt upgrade.
+---
 
-Removes unused dependencies via apt autoremove and apt autoclean.
+## Features
 
-Cleans APT package cache with apt clean.
+* Updates package lists using `apt update`
+* Upgrades all installed packages using `apt upgrade`
+* Removes unused dependencies with `apt autoremove` and `apt autoclean`
+* Cleans APT package cache using `apt clean`
+* Deletes:
 
-Deletes user thumbnails, system cache, and temporary files.
+  * User thumbnail cache
+  * System cache files
+  * Temporary files
+* Rotates system logs using `journalctl --vacuum-time=1d`
+* Displays success/failure status for every operation with visual feedback
 
-Rotates logs using journalctl --vacuum-time=1d.
-All operations include success/failure checks and visual feedback.
-​
+---
 
-Prerequisites
-Ubuntu/Debian-based system with apt package manager.
+## Prerequisites
 
-Root privileges (script uses sudo extensively).
+* Ubuntu/Debian-based Linux distribution
+* `apt` package manager
+* Root privileges (the script uses `sudo`)
+* `systemd` with `journalctl` available
 
-journalctl for log rotation (systemd-based systems).
-​
+---
 
-Installation
-Save the script as system-maintenance.sh:
+## Installation
 
-bash
-chmod +x system-maintenance.sh
+1. Save the script as `system-maintenance.sh`:
+
+   ```bash
+   nano system-maintenance.sh
+   ```
+
+2. Make the script executable:
+
+   ```bash
+   chmod +x system-maintenance.sh
+   ```
+
+3. Run the script:
+
+   ```bash
+   sudo ./system-maintenance.sh
+   ```
+
+---
+
+## Desktop Shortcut (Optional)
+
+To create a desktop launcher:
+
+1. Create a `.desktop` file:
+
+   ```bash
+   nano ~/.local/share/applications/zerodust.desktop
+   ```
+
+2. Add the following:
+
+   ```ini
+   [Desktop Entry]
+   Name=ZeroDust System Maintenance
+   Exec=sudo /path/to/system-maintenance.sh
+   Icon=utilities-terminal
+   Type=Application
+   Terminal=true
+   Categories=System;
+   ```
+
+---
+
+## Usage
+
+Run the script manually for full maintenance:
+
+```bash
 sudo ./system-maintenance.sh
-For desktop shortcut, create a .desktop file in ~/.local/share/applications/ with Terminal=true.
-​
+```
 
-Usage
-Run directly for full maintenance:
+The script executes tasks in the following order:
 
-bash
-sudo ./system-maintenance.sh
-Script executes sequentially: Update → Upgrade → Autoremove → Clean → Clear → Log.
-​
+```
+Update → Upgrade → Autoremove → Clean → Clear Cache → Log Rotation
+```
 
-Safety Notes
-apt autoremove removes auto-installed dependencies no longer needed but may affect manually used packages—review output first.
-​
+---
 
-Clear() deletes /tmp/* and /var/cache/*—safe for most cases but test on non-production systems.
-​
+## Safety Notes
 
-Add set -e for strict error handling and trap for cleanup on interrupt.
-​
+* ⚠ **`apt autoremove`** may remove packages that were automatically installed as dependencies. Always review the output before confirming.
+* ⚠ **Cache cleanup** removes:
 
-Run weekly via cron: 0 2 * * 0 /path/to/script.sh.
-​
+  * `/tmp/*`
+  * `/var/cache/*`
+    This is safe for most systems but should be tested on non-production environments first.
+* Consider adding the following for stricter error handling:
+
+  ```bash
+  set -e
+  trap "echo 'Script interrupted'" INT
+  ```
+
+---
+
+## Automation (Cron Job)
+
+To run ZeroDust weekly (every Sunday at 2:00 AM):
+
+```bash
+0 2 * * 0 /path/to/system-maintenance.sh
+```
+
+Edit cron jobs with:
+
+```bash
+crontab -e
+```
+
+---
+
+## License
+
+MIT License (or specify your preferred license)
+
+---
+
+If you want, I can also:
+
+* Rename everything consistently to **ZeroDust**
+* Add screenshots or badges
+* Write a **man page**
+* Optimize the script for servers vs desktops
