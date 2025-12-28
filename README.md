@@ -1,7 +1,3 @@
-Here’s a clean, professional **README.md** for your **ZeroDust.sh** system maintenance script. It’s written in a GitHub-ready format and matches what your script actually does on Debian/Ubuntu systems.
-
----
-
 # 🧹 ZeroDust.sh
 
 **ZeroDust.sh** is a lightweight Bash-based system maintenance script for **Debian-based Linux distributions**. It automates routine cleanup and update tasks with clear, color-coded terminal output, helping keep your system clean, fast, and up to date.
@@ -68,20 +64,13 @@ chmod +x ZeroDust.sh
 Create a desktop entry file:
 
 ```ini
-[Desktop Entry]
-Type=Application
-Name=Up
-Comment=Run system maintenance script
-Exec=gnome-terminal -- bash -c /ZeroDust.sh
-Icon=/image.png
-Terminal=false
-Categories=Utility;
+ Name : ZeroDust.desktop
 ```
 
 ### Enable the Shortcut
 
 ```bash
-chmod +x Up.desktop
+chmod +x ZeroDust.desktop
 ```
 
 Move it to:
