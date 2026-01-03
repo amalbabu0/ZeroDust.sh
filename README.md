@@ -4,20 +4,20 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-* 📦 Updates package lists (`apt update`)
-* ⬆️ Upgrades installed packages (`apt upgrade`)
-* 🧼 Removes unused dependencies (`apt autoremove`, `apt autoclean`)
-* 🗑️ Cleans APT package cache (`apt clean`)
-* 🧹 Clears temporary and cache files
-* 📝 Rotates system logs (keeps last 1 day)
-* 🎨 Color-coded output for better readability
-* 🚀 Can be launched via a desktop shortcut
+*  Updates package lists (`apt update`)
+*  Upgrades installed packages (`apt upgrade`)
+*  Removes unused dependencies (`apt autoremove`, `apt autoclean`)
+*  Cleans APT package cache (`apt clean`)
+*  Clears temporary and cache files
+*  Rotates system logs (keeps last 1 day)
+*  Color-coded output for better readability
+*  Can be launched via a desktop shortcut
 
 ---
 
-## 🖥️ Supported Systems
+## Supported Systems
 
 * Ubuntu
 * Debian
@@ -26,7 +26,7 @@
 
 ---
 
-## 📂 Files Included
+## Files Included
 
 * `ZeroDust.sh` – Main maintenance script
 * `Up.desktop` – Desktop launcher (optional)
@@ -34,32 +34,32 @@
 
 ---
 
-## 🔧 Installation
+## Installation
 
-### 1️⃣ Clone or Download
+### Clone or Download
 
 ```bash
 git clone https://github.com/yourusername/ZeroDust.sh.git
 cd ZeroDust.sh
 ```
 
-### 2️⃣ Make the Script Executable
+### Make the Script Executable
 
 ```bash
 chmod +x ZeroDust.sh
 ```
 
-### 3️⃣ Run the Script
+### Run the Script
 
 ```bash
 ./ZeroDust.sh
 ```
 
-> ⚠️ **Note:** The script uses `sudo`, so you will be prompted for your password.
+> **Note:** The script uses `sudo`, so you will be prompted for your password.
 
 ---
 
-## 🖱️ Desktop Shortcut Setup (Optional)
+## Desktop Shortcut Setup (Optional)
 
 Create a desktop entry file:
 
@@ -81,7 +81,7 @@ Move it to:
 
 ---
 
-## 🔐 What the Script Does (Detailed)
+## What the Script Does (Detailed)
 
 | Task       | Description                         |
 | ---------- | ----------------------------------- |
@@ -94,7 +94,7 @@ Move it to:
 
 ---
 
-## ⚠️ Warnings
+## Warnings
 
 * Removes **all** files from:
 
@@ -105,7 +105,7 @@ Move it to:
 
 ---
 
-## 📅 Completion Output
+## Completion Output
 
 At the end of execution, the script displays:
 
@@ -115,14 +115,14 @@ At the end of execution, the script displays:
 
 ---
 
-## 📜 License
+## License
 
 This project is released under the **MIT License**.
 Feel free to modify and distribute.
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
 Pull requests, bug reports, and feature suggestions are welcome!
 
@@ -130,9 +130,9 @@ Pull requests, bug reports, and feature suggestions are welcome!
 
 If you want, I can also:
 
-* 🔥 Optimize the script for safety
-* 📦 Convert this into a `.deb` package
-* 🖼️ Design a proper icon
-* 📑 Create a man page
+*  Optimize the script for safety
+*  Convert this into a `.deb` package
+*  Design a proper icon
+*  Create a man page
 
 Just tell me 👍
