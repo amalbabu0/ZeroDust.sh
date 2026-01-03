@@ -127,12 +127,3 @@ Feel free to modify and distribute.
 Pull requests, bug reports, and feature suggestions are welcome!
 
 ---
-
-If you want, I can also:
-
-*  Optimize the script for safety
-*  Convert this into a `.deb` package
-*  Design a proper icon
-*  Create a man page
-
-Just tell me 👍
