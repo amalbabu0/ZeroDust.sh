@@ -4,18 +4,19 @@
 
 ---
 
-##  Features
+## What the Script Does (Detailed)
 
-*  Updates package lists (`apt update`)
-*  Upgrades installed packages (`apt upgrade`)
-*  Removes unused dependencies (`apt autoremove`, `apt autoclean`)
-*  Cleans APT package cache (`apt clean`)
-*  Clears temporary and cache files
-*  Rotates system logs (keeps last 1 day)
-*  Color-coded output for better readability
-*  Can be launched via a desktop shortcut
+| Task       | Description                         |
+| ---------- | ----------------------------------- |
+| Update     | Refreshes package lists             |
+| Upgrade    | Installs latest package versions    |
+| Autoremove | Removes unused dependencies         |
+| Clean      | Clears APT cache                    |
+| Clear      | Deletes temp files and system cache |
+| Log        | Rotates logs older than 1 day       |
 
 ---
+
 
 ## Supported Systems
 
@@ -75,20 +76,5 @@ Move it to:
 ```bash
 ~/.local/share/applications/
 ```
-
----
-
-## What the Script Does (Detailed)
-
-| Task       | Description                         |
-| ---------- | ----------------------------------- |
-| Update     | Refreshes package lists             |
-| Upgrade    | Installs latest package versions    |
-| Autoremove | Removes unused dependencies         |
-| Clean      | Clears APT cache                    |
-| Clear      | Deletes temp files and system cache |
-| Log        | Rotates logs older than 1 day       |
-
----
 
 
