@@ -19,9 +19,6 @@
 
 ## Supported Systems
 
-* Ubuntu
-* Debian
-* Linux Mint
 * Any **Debian-based** Linux distribution
 
 ---
@@ -94,36 +91,4 @@ Move it to:
 
 ---
 
-## Warnings
 
-* Removes **all** files from:
-
-  * `/tmp`
-  * `/var/cache`
-  * `~/.cache/thumbnails`
-* Make sure no critical processes are using temporary files.
-
----
-
-## Completion Output
-
-At the end of execution, the script displays:
-
-```
-<hostname> - completed in <date & time>
-```
-
----
-
-## License
-
-This project is released under the **MIT License**.
-Feel free to modify and distribute.
-
----
-
-## Contributions
-
-Pull requests, bug reports, and feature suggestions are welcome!
-
----
